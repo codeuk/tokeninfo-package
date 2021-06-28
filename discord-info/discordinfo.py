@@ -1,6 +1,6 @@
-#discordinfo python module / github.com/7uk
+#tokeninfo python module ~ github.com/7uk
 
-#discordinfo is a tool created for simply looking up discord account data with the use of an account token.
+#tokeninfo is a tool created for simply looking up discord account data with the use of an account token.
 
 import requests
 import json
@@ -13,28 +13,28 @@ cc_digits = {
 
 def help():
     return """
-	[+] Welcome to discordinfo | Tool for discord token information
+	[+] Welcome to tokeninfo | Tool for discord token information
                             < doop | github/7uk >       
 			
 	[+] General Commands:
 	
-	  [-] discordinfo.user()        |  Returns general user data
-	  [-] discordinfo.payment()     |  Returns payment data
+	  [-] tokeninfo.user()        |  Returns general user data
+	  [-] tokeninfo.payment()     |  Returns payment data
 
 	[+] Specific Commands:
 	
-	  [-] discordinfo.username()    |  Returns accounts username
-	  [-] discordinfo.phonenumber() |  Returns accounts phonenumber
-	  [-] discordinfo.userid()      |  Returns accounts user ID
-	  [-] discordinfo.avatar()      |  Returns accounts avatar	
-	  [-] discordinfo.email()       |  Returns accounts email
-	  [-] discordinfo.auth()        |  Returns accounts 2FA status
-	  [-] discordinfo.flags()       |  Returns accounts flags
-	  [-] discordinfo.language()    |  Returns accounts language	  
-	  [-] discordinfo.verified()    |  Returns accounts email verification	  
+	  [-] tokeninfo.username()    |  Returns accounts username
+	  [-] tokeninfo.phonenumber() |  Returns accounts phonenumber
+	  [-] tokeninfo.userid()      |  Returns accounts user ID
+	  [-] tokeninfo.avatar()      |  Returns accounts avatar	
+	  [-] tokeninfo.email()       |  Returns accounts email
+	  [-] tokeninfo.auth()        |  Returns accounts 2FA status
+	  [-] tokeninfo.flags()       |  Returns accounts flags
+	  [-] tokeninfo.language()    |  Returns accounts language	  
+	  [-] tokeninfo.verified()    |  Returns accounts email verification	  
 	
 	[INFO] Use commands within a file & with a token argument.
-	[INFO] Example: discordinfo.email(token)
+	[INFO] Example: tokeninfo.email(token)
 	"""
 
 
@@ -62,7 +62,7 @@ def user(token):
         return user_name, user_id, avatar_id, avatar_url, phone_number, email, mfa_enabled, flags, locale, verified
 
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 		
 def payment(token):
     headers = {
@@ -134,7 +134,7 @@ def username(token):
         user_name = f'{res_json["username"]}#{res_json["discriminator"]}'
         return user_name
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def userid(token):
     headers = {
@@ -149,7 +149,7 @@ def userid(token):
         user_id = res_json['id']
         return user_id
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 		
 def avatar(token):
     headers = {
@@ -164,7 +164,7 @@ def avatar(token):
         avatar_url = f'https://cdn.discordapp.com/avatars/{user_id}/{avatar_id}.gif'
         return avatar_url
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def phonenumber(token):
     headers = {
@@ -179,7 +179,7 @@ def phonenumber(token):
         phone_number = res_json['phone']
         return phone_number
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def email(token):
     headers = {
@@ -194,7 +194,7 @@ def email(token):
         email = res_json['email']
         return email
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def auth(token):
     headers = {
@@ -209,7 +209,7 @@ def auth(token):
         mfa_enabled = res_json['mfa_enabled']
         return mfa_enabled
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def flags(token):
     headers = {
@@ -224,7 +224,7 @@ def flags(token):
         flags = res_json['flags']
         return flags
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def language(token):
     headers = {
@@ -239,7 +239,7 @@ def language(token):
         locale = res_json['locale']
         return locale
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
 
 def emailverified(token):
     headers = {
@@ -254,4 +254,7 @@ def emailverified(token):
         verified = res_json['verified']
         return verified
     else:
-        return 'discordinfo ERROR: Improper token passed.'
+        return 'tokeninfo ERROR: Improper token passed.'
+
+if __name__ == "__main__":
+    print(help())
