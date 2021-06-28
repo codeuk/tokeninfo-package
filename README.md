@@ -1,2 +1,11 @@
-# discordinfo-package
-discordinfo is a Python Package created for simply scraping discord account data with the use of an account token.
+# discordinfo
+
+discordinfo is a Python Package build around the Discord app, and provicdes a simple way to scrape data from Discord accounts using Account Tokens. 
+
+# Usage
+
+Just use the following query inside your local terminal to see the uses and details for all commands inside discordinfo.
+
+```
+discordinfo
+```
