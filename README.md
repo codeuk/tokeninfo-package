@@ -1,13 +1,13 @@
-# discordinfo
+TokenInfo Project.
 
-discordinfo is a Python Package build around Discord Accounts. 
+Created by doop#0001 ~ github.com/7uk
 
-discordinfo provides a simple way to scrape data from Discord accounts using Account Tokens. 
+tokeninfo is a Python Package build around Discord Accounts. 
 
-# Usage
+tokeninfo provides a simple way to scrape data from Discord accounts using Account Tokens. 
 
-Just use the following query inside your local terminal to see the uses and details for all commands inside discordinfo.
+TokenInfo Usage:
 
-```
-discordinfo
-```
+Just use the following query inside your local terminal to see the uses and details for all commands inside tokeninfo.
+
+*tokeninfo*
