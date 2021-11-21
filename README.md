@@ -1,6 +1,6 @@
 # TokenInfo Project.
 
-Created by doop#0001 ~ github.com/7uk
+Created by doop#0001 ~ github.com/codeuk
 
 tokeninfo is a Python Package build around Discord Accounts. 
 
